@@ -38,11 +38,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/RPG.csproj",
+      "projectUniqueName": "/Users/ezequielcardoso/Documents/GitHub/RPG/RPG.csproj",
       "projectName": "RPG",
-      "projectPath": "/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/RPG.csproj",
+      "projectPath": "/Users/ezequielcardoso/Documents/GitHub/RPG/RPG.csproj",
       "packagesPath": "/Users/ezequielcardoso/.nuget/packages/",
-      "outputPath": "/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/obj/",
+      "outputPath": "/Users/ezequielcardoso/Documents/GitHub/RPG/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ezequielcardoso/.nuget/NuGet/NuGet.Config"
