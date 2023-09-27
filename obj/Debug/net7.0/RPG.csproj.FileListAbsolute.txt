@@ -1,0 +1,51 @@
+C:/Users/ezhelit/RiderProjects/RPG/obj/Debug/net7.0/RPG.csproj.AssemblyReference.cache
+C:/Users/ezhelit/RiderProjects/RPG/obj/Debug/net7.0/RPG.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/ezhelit/RiderProjects/RPG/obj/Debug/net7.0/RPG.AssemblyInfoInputs.cache
+C:/Users/ezhelit/RiderProjects/RPG/obj/Debug/net7.0/RPG.AssemblyInfo.cs
+C:/Users/ezhelit/RiderProjects/RPG/obj/Debug/net7.0/RPG.csproj.CoreCompileInputs.cache
+C:/Users/ezhelit/RiderProjects/RPG/bin/Debug/net7.0/RPG.exe
+C:/Users/ezhelit/RiderProjects/RPG/bin/Debug/net7.0/RPG.deps.json
+C:/Users/ezhelit/RiderProjects/RPG/bin/Debug/net7.0/RPG.runtimeconfig.json
+C:/Users/ezhelit/RiderProjects/RPG/bin/Debug/net7.0/RPG.dll
+C:/Users/ezhelit/RiderProjects/RPG/bin/Debug/net7.0/RPG.pdb
+C:/Users/ezhelit/RiderProjects/RPG/bin/Debug/net7.0/NCalc.dll
+C:/Users/ezhelit/RiderProjects/RPG/obj/Debug/net7.0/RPG.csproj.CopyComplete
+C:/Users/ezhelit/RiderProjects/RPG/obj/Debug/net7.0/RPG.dll
+C:/Users/ezhelit/RiderProjects/RPG/obj/Debug/net7.0/refint/RPG.dll
+C:/Users/ezhelit/RiderProjects/RPG/obj/Debug/net7.0/RPG.pdb
+C:/Users/ezhelit/RiderProjects/RPG/obj/Debug/net7.0/RPG.genruntimeconfig.cache
+C:/Users/ezhelit/RiderProjects/RPG/obj/Debug/net7.0/ref/RPG.dll
+C:/Users/ezhelit/Documents/EAC/RPG/bin/Debug/net7.0/RPG.exe
+C:/Users/ezhelit/Documents/EAC/RPG/bin/Debug/net7.0/RPG.deps.json
+C:/Users/ezhelit/Documents/EAC/RPG/bin/Debug/net7.0/RPG.runtimeconfig.json
+C:/Users/ezhelit/Documents/EAC/RPG/bin/Debug/net7.0/RPG.dll
+C:/Users/ezhelit/Documents/EAC/RPG/bin/Debug/net7.0/RPG.pdb
+C:/Users/ezhelit/Documents/EAC/RPG/bin/Debug/net7.0/NCalc.dll
+C:/Users/ezhelit/Documents/EAC/RPG/obj/Debug/net7.0/RPG.csproj.AssemblyReference.cache
+C:/Users/ezhelit/Documents/EAC/RPG/obj/Debug/net7.0/RPG.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/ezhelit/Documents/EAC/RPG/obj/Debug/net7.0/RPG.AssemblyInfoInputs.cache
+C:/Users/ezhelit/Documents/EAC/RPG/obj/Debug/net7.0/RPG.AssemblyInfo.cs
+C:/Users/ezhelit/Documents/EAC/RPG/obj/Debug/net7.0/RPG.csproj.CoreCompileInputs.cache
+C:/Users/ezhelit/Documents/EAC/RPG/obj/Debug/net7.0/RPG.csproj.CopyComplete
+C:/Users/ezhelit/Documents/EAC/RPG/obj/Debug/net7.0/RPG.dll
+C:/Users/ezhelit/Documents/EAC/RPG/obj/Debug/net7.0/refint/RPG.dll
+C:/Users/ezhelit/Documents/EAC/RPG/obj/Debug/net7.0/RPG.pdb
+C:/Users/ezhelit/Documents/EAC/RPG/obj/Debug/net7.0/RPG.genruntimeconfig.cache
+C:/Users/ezhelit/Documents/EAC/RPG/obj/Debug/net7.0/ref/RPG.dll
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/bin/Debug/net7.0/RPG
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/bin/Debug/net7.0/RPG.deps.json
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/bin/Debug/net7.0/RPG.runtimeconfig.json
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/bin/Debug/net7.0/RPG.dll
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/bin/Debug/net7.0/RPG.pdb
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/bin/Debug/net7.0/NCalc.dll
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/obj/Debug/net7.0/RPG.csproj.AssemblyReference.cache
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/obj/Debug/net7.0/RPG.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/obj/Debug/net7.0/RPG.AssemblyInfoInputs.cache
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/obj/Debug/net7.0/RPG.AssemblyInfo.cs
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/obj/Debug/net7.0/RPG.csproj.CoreCompileInputs.cache
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/obj/Debug/net7.0/RPG.csproj.CopyComplete
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/obj/Debug/net7.0/RPG.dll
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/obj/Debug/net7.0/refint/RPG.dll
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/obj/Debug/net7.0/RPG.pdb
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/obj/Debug/net7.0/RPG.genruntimeconfig.cache
+/Users/ezequielcardoso/Library/Mobile Documents/com~apple~CloudDocs/PENDRIVE/EAC/RPG/obj/Debug/net7.0/ref/RPG.dll

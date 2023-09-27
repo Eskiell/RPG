@@ -1,0 +1,44 @@
+﻿[
+  {
+    "name": "Miquella",
+    "health": 2000,
+    "pointsAttributes": {
+      "vitality": 30,
+      "vigor": 10,
+      "strength": 40,
+      "dexterity": 60,
+      "intelligence": 10,
+      "faith": 10,
+      "endurance": 10,
+      "arcane": 10
+    }
+  },
+  {
+    "name": "Starscourge Radahn",
+    "health": 2000,
+    "pointsAttributes": {
+      "vitality": 30,
+      "vigor": 20,
+      "strength": 50,
+      "dexterity": 30,
+      "intelligence": 20,
+      "faith": 10,
+      "endurance": 10,
+      "arcane": 10
+    }
+  },
+  {
+    "name": "Eleanor",
+    "health": 1500,
+    "pointsAttributes": {
+      "vitality": 20,
+      "vigor": 15,
+      "strength": 25,
+      "dexterity": 45,
+      "intelligence": 15,
+      "faith": 20,
+      "endurance": 15,
+      "arcane": 15
+    }
+  }
+]

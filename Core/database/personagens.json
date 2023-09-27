@@ -1,0 +1,40 @@
+﻿[
+  {
+    "name": "Starscourge Radahn",
+    "health": 1000,
+    "attributes": [
+      {
+        "attribute": "vitality",
+        "value": 30
+      },
+      {
+        "attribute": "vigor",
+        "value": 30
+      },
+      {
+        "attribute": "strength",
+        "value": 40
+      },
+      {
+        "attribute": "dexterity",
+        "value": 20
+      },
+      {
+        "attribute": "intelligence",
+        "value": 10
+      },
+      {
+        "attribute": "faith",
+        "value": 10
+      },
+      {
+        "attribute": "endurance",
+        "value": 10
+      },
+      {
+        "attribute": "arcane",
+        "value": 10
+      }
+    ]
+  }
+]

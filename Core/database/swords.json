@@ -1,0 +1,55 @@
+﻿{
+  "swords": [
+    {
+      "id": 1,
+      "name": "Espada Longa",
+      "damage": 50,
+      "weight": 10,
+      "scaling": [
+        {
+          "attribute": "strength",
+          "value": 0.04
+        },
+        {
+          "attribute": "dexterity",
+          "value": 0.03
+        }
+      ],
+      "level": 1
+    },
+    {
+      "id": 2,
+      "name": "Espada Curta",
+      "damage": 40,
+      "weight": 8,
+      "scaling": [
+        {
+          "attribute": "strength",
+          "value": 0.03
+        },
+        {
+          "attribute": "dexterity",
+          "value": 0.04
+        }
+      ],
+      "level": 2
+    },
+    {
+      "id": 3,
+      "name": "Espada de Duas Mãos",
+      "damage": 70,
+      "weight": 15,
+      "scaling": [
+        {
+          "attribute": "strength",
+          "value": 0.06
+        },
+        {
+          "attribute": "dexterity",
+          "value": 0.02
+        }
+      ],
+      "level": 3
+    }
+  ]
+}
