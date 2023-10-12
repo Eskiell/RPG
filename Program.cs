@@ -6,8 +6,8 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var miquella = new Player(
-            "Miquella",
+        var malenia = new Player(
+            "Malenia, Blade of Miquella",
             2000f,
             new PointsAttributes
             {
@@ -20,7 +20,7 @@ internal class Program
                 Endurance = 10,
                 Arcane = 10
             });
-        miquella.EquipWeapon(new Sword(
+        malenia.EquipWeapon(new Sword(
             "Sword Waterfowl Dance",
             25,
             1.0f,
@@ -52,7 +52,8 @@ internal class Program
             10,
             new[]
             {
-                new ScalingAttribute { Attribute = "strength", Value = 0.10f }
+                new ScalingAttribute { Attribute = "strength", Value = 0.10f },
+                new ScalingAttribute { Attribute = "intelligence", Value = 0.10f }
             }
         ));
 
@@ -65,24 +66,24 @@ internal class Program
         hemorrhageEffect.ApplyEffect(radahn);
         while (hemorrhageEffect.IsActive()) hemorrhageEffect.IncreaseBloodBar(0.1f);
 
-        while (miquella.IsAlive() && radahn.IsAlive())
+        while (malenia.IsAlive() && radahn.IsAlive())
         {
-            miquella.Attack(radahn);
-            radahn.Attack(miquella);
+            malenia.Attack(radahn);
+            radahn.Attack(malenia);
         }
 
-        if (!miquella.IsAlive())
+        if (!malenia.IsAlive())
         {
             radahn.GainExperience(100);
-            Console.WriteLine(miquella.Name + " foi derrotada!");
+            Console.WriteLine(malenia.Name + " foi derrotada!");
         }
 
         if (!radahn.IsAlive())
         {
-            miquella.GainExperience(100);
+            malenia.GainExperience(100);
             Console.WriteLine(radahn.Name + " foi derrotado!");
         }
 
-        miquella.Drops();
+        malenia.Drops();
     }
 }
