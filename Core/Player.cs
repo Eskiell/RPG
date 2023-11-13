@@ -1,4 +1,7 @@
-﻿using RPG.Core.Enum;
+﻿using RPG.Attributes;
+using RPG.Calculators;
+using RPG.Enums;
+using RPG.Items;
 
 namespace RPG.Core;
 
@@ -20,8 +23,6 @@ public class Player : Character
     public int Level { get; private set; }
     public double Experience { get; private set; }
 
-    public Weapon? EquippedWeapon { get; set; }
-
     public override void Attack(Character enemy)
     {
         if (EquippedWeapon != null)
@@ -34,18 +35,6 @@ public class Player : Character
         var power = damage.CalculateTotalDamage();
         enemy.TakeDamage(power);
         Console.WriteLine($"{Name} attacked {enemy.Name} with a punch for {power} damage.");
-    }
-
-    public void EquipWeapon(Weapon weapon)
-    {
-        EquippedWeapon = weapon;
-        Console.WriteLine($"{Name} equipped {weapon.Name}.");
-    }
-
-    public void UnequipWeapon()
-    {
-        EquippedWeapon = null;
-        Console.WriteLine($"{Name} unequipped the weapon.");
     }
 
     public void GainExperience(double amount)

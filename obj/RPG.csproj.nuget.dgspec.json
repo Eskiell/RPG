@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ezequielcardoso/Documents/GitHub/RPG/RPG.csproj": {}
+    "C:\\Users\\ezequ\\OneDrive\\Documentos\\GitHub\\RPG\\RPG.csproj": {}
   },
   "projects": {
-    "/Users/ezequielcardoso/Documents/GitHub/RPG/RPG.csproj": {
+    "C:\\Users\\ezequ\\OneDrive\\Documentos\\GitHub\\RPG\\RPG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ezequielcardoso/Documents/GitHub/RPG/RPG.csproj",
+        "projectUniqueName": "C:\\Users\\ezequ\\OneDrive\\Documentos\\GitHub\\RPG\\RPG.csproj",
         "projectName": "RPG",
-        "projectPath": "/Users/ezequielcardoso/Documents/GitHub/RPG/RPG.csproj",
-        "packagesPath": "/Users/ezequielcardoso/.nuget/packages/",
-        "outputPath": "/Users/ezequielcardoso/Documents/GitHub/RPG/obj/",
+        "projectPath": "C:\\Users\\ezequ\\OneDrive\\Documentos\\GitHub\\RPG\\RPG.csproj",
+        "packagesPath": "C:\\Users\\ezequ\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ezequ\\OneDrive\\Documentos\\GitHub\\RPG\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/ezequielcardoso/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ezequ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -41,6 +48,10 @@
             "NCalc": {
               "target": "Package",
               "version": "[1.3.8, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
@@ -59,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,18 @@
+﻿[
+  {
+    "Name": "Poção",
+    "Value": 10,
+    "ItemRarity": "Common",
+    "Description": "Uma poção simples",
+    "Price": 5.0,
+    "Consumable": "Yes"
+  },
+  {
+    "Name": "Espada",
+    "Value": 100,
+    "ItemRarity": "Rare",
+    "Description": "Uma espada afiada",
+    "Price": 50.0,
+    "Consumable": "No"
+  }
+]
