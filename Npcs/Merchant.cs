@@ -10,6 +10,6 @@ public class Merchant : Npc
     public Merchant(string name, float health, PointsAttributes pointsAttributes, List<Item> itemsForSale) : base(name,
         health, pointsAttributes)
     {
-        SellingBehavior = new SellingBehavior(itemsForSale);
+        Behavior = new SellingBehavior(itemsForSale);
     }
 }

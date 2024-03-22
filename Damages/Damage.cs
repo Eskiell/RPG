@@ -5,19 +5,20 @@ namespace RPG.Damages;
 
 public class Damage
 {
-    public Damage(DamageType type, int value, ScalingAttribute[] scaling)
+    public Damage(List<DamageType> types, int value, ScalingAttribute[] scaling)
     {
-        Type = type;
+        Types = types;
         Value = value;
         Scaling = scaling;
     }
 
-    private DamageType Type { get; }
+    private List<DamageType> Types { get; }
     private int Value { get; }
     private ScalingAttribute[] Scaling { get; set; }
 
     public override string ToString()
     {
-        return $"{Value} {Type} Damage";
+        string typesString = string.Join(" + ", Types);
+        return $"{Value} [{typesString}] Damage";
     }
 }

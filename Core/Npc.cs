@@ -12,7 +12,6 @@ public class Npc : Character
 
     public IBehavior Behavior { get; set; }
     public NpcType Type { get; set; }
-    public SellingBehavior SellingBehavior { get; set; }
     public bool IsHostile { get; set; } // Define se o NPC é hostil ou não.
     public string Dialogue { get; set; } // Uma mensagem ou diálogo que o NPC pode dizer ao jogador.
 
@@ -43,9 +42,14 @@ public class Npc : Character
     public void Talk(Character interactor)
     {
         if (IsHostile)
+        {
             Console.WriteLine($"{Name}: Fora daqui antes que eu te ataque!");
+            Console.WriteLine($"{interactor.Name}: Calma aí, eu só queria conversar.");
+        }
         else
+        {
             Console.WriteLine(Dialogue);
+        }
     }
 
     public void Trade(Player player)

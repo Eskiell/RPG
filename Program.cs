@@ -145,7 +145,7 @@ internal class Program
         };
         var loader = new LoadItems();
         var items = loader.Items;
-        Console.WriteLine(loader.Items![0].Consumable); // Exibirá: "Poção"
+        Console.WriteLine(loader.Items![0].Consumable); // Exibirá: "Poção" 
         var merchant = new Merchant(
             "Brom, the Merchant",
             500f,
@@ -162,7 +162,7 @@ internal class Program
             },
             items
         );
-        merchant.Attack(malenia);
-        merchant.PerformBehavior(); // Exibirá: "Bob tem os seguintes itens à venda: Poção, Espada"
+        merchant.Attack(malenia); // Exibirá: "Brom, the Merchant não é hostil e não atacará a menos que seja provocado."
+        merchant.PerformBehavior(); // Exibirá: "Bob tem os seguintes itens à venda: Poção, Espada, Armadura"
     }
 }
