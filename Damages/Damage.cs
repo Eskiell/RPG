@@ -18,7 +18,7 @@ public class Damage
 
     public override string ToString()
     {
-        string typesString = string.Join(" + ", Types);
+        var typesString = string.Join(" + ", Types);
         return $"{Value} [{typesString}] Damage";
     }
 }

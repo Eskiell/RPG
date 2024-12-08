@@ -25,6 +25,11 @@ public class Npc : Character
         IsHostile = true;
     }
 
+    public void CalmDown()
+    {
+        IsHostile = false;
+    }
+
     public override void Attack(Character target)
     {
         if (IsHostile)

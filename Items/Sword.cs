@@ -40,5 +40,16 @@ public class Sword : Weapon
         var power = damage.CalculateTotalDamage();
         target.TakeDamage(power);
         Console.WriteLine($"{attacker.Name} attacked {target.Name} with {Name} for {power} damage.");
+
+        // Aplica os efeitos especiais
+        // conta quantos efeitos foram aplicados
+        Console.WriteLine(Effects.Count);
+        foreach (var effect in Effects)
+        {
+            Console.WriteLine($"{attacker.Name} used {Name} and applied {effect.GetType().Name} to {target.Name}.");
+            effect.ApplyEffect(attacker, target);
+
+            Durability--;
+        }
     }
 }

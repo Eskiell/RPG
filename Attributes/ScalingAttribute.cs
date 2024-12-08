@@ -1,7 +1,9 @@
-﻿namespace RPG.Attributes;
+﻿using RPG.Enums;
 
-public class ScalingAttribute
+namespace RPG.Attributes;
+
+public class ScalingAttribute(CharacterAttribute attribute, float value)
 {
-    public string Attribute { get; set; }
-    public float Value { get; set; }
+    public CharacterAttribute Attribute { get; private set; } = attribute;
+    public float Value { get; private set; } = value;
 }

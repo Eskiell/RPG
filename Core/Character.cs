@@ -1,5 +1,6 @@
 ﻿using RPG.Attributes;
-using RPG.Items;
+using RPG.Calculators;
+using RPG.Effects;
 
 namespace RPG.Core;
 
@@ -10,7 +11,10 @@ public abstract class Character
         Name = name;
         Health = health;
         CharacterPointsAttributes = pointsAttributes;
+        Equipment = new EquipmentManager(this);
     }
+
+    public List<StatusEffect> ActiveEffects { get; set; } = new();
 
     // Atributos gerais
     public string Name { get; set; }
@@ -18,8 +22,23 @@ public abstract class Character
     public float BaseAttack { get; set; } = 10;
     public float BaseDefense { get; set; } = 10;
     public int Level { get; set; } = 1;
-    public Weapon? EquippedWeapon { get; set; }
+
+    public EquipmentManager Equipment { get; }
     public PointsAttributes CharacterPointsAttributes { get; protected set; }
+
+    public void UpdateEffects()
+    {
+        var expiredEffects = new List<StatusEffect>();
+        foreach (var effect in ActiveEffects)
+        {
+            effect.Duration--;
+
+            if (effect.Duration <= 0)
+                expiredEffects.Add(effect);
+        }
+
+        foreach (var effect in expiredEffects) effect.RemoveEffect(this);
+    }
 
     public abstract void Attack(Character target);
 
@@ -45,12 +64,12 @@ public abstract class Character
 
     public virtual float GetModifiedBaseAttack()
     {
-        return BaseAttack;
+        return CombatCalculator.CalculateModifiedAttack(this);
     }
 
     public virtual float GetModifiedBaseDefense()
     {
-        return BaseDefense;
+        return CombatCalculator.CalculateModifiedDefense(this);
     }
 
     public virtual float GetModifiedPDefense()
@@ -67,11 +86,7 @@ public abstract class Character
 
     public virtual float GetModifiedPAttack()
     {
-        var strength = CharacterPointsAttributes.Strength;
-        var dexterity = CharacterPointsAttributes.Dexterity;
-        const float strengthBonus = AttributeBonus.Strength;
-        const float dexterityBonus = AttributeBonus.Dexterity;
-        return GetModifiedBaseAttack() * strength * dexterity * strengthBonus * dexterityBonus;
+        return CombatCalculator.CalculatePhysicalAttack(this);
     }
 
     public void IncreaseLevelUp(int amount)
@@ -79,25 +94,9 @@ public abstract class Character
         Level += amount;
     }
 
-    public void IncreaseHealth(float amount)
+    public void AdjustHealth(float amount)
     {
         Health += amount;
-    }
-
-    public void DecreaseHealth(float amount)
-    {
-        Health -= amount;
-    }
-
-    public virtual void EquipWeapon(Weapon weapon)
-    {
-        EquippedWeapon = weapon;
-        Console.WriteLine($"{Name} equipped {weapon.Name}.");
-    }
-
-    public virtual void UnequipWeapon()
-    {
-        EquippedWeapon = null;
-        Console.WriteLine($"{Name} unequipped the weapon.");
+        if (Health < 0) Health = 0;
     }
 }

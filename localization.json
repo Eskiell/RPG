@@ -1,0 +1,8 @@
+{
+  "en": {
+    "Character.Attack": "{attacker} attacked {target} for {damage} damage."
+  },
+  "pt": {
+    "Character.Attack": "{attacker} atacou {target} causando {damage} de dano."
+  }
+}

@@ -1,4 +1,5 @@
 ﻿using RPG.Core;
+using RPG.Effects;
 
 namespace RPG.Items;
 
@@ -12,6 +13,7 @@ public abstract class Weapon : Equipment
         Durability = durability;
     }
 
+    public List<IWeaponEffect> Effects { get; } = new();
     public string Name { get; set; }
     public float Damage { get; set; }
     public float AttackSpeed { get; set; }

@@ -1,23 +1,24 @@
 ﻿using RPG.Attributes;
+using RPG.Enums;
 
 namespace RPG.Calculators;
 
 public class ScalingCalculator
 {
-    private readonly Dictionary<string, Func<PointsAttributes, float>> attributeCalculators;
+    private readonly Dictionary<CharacterAttribute, Func<PointsAttributes, float>> _attributeCalculators;
 
     public ScalingCalculator()
     {
-        attributeCalculators = new Dictionary<string, Func<PointsAttributes, float>>
+        _attributeCalculators = new Dictionary<CharacterAttribute, Func<PointsAttributes, float>>
         {
-            { "vitality", attributes => attributes.Vitality },
-            { "vigor", attributes => attributes.Vigor },
-            { "strength", attributes => attributes.Strength },
-            { "dexterity", attributes => attributes.Dexterity },
-            { "intelligence", attributes => attributes.Intelligence },
-            { "faith", attributes => attributes.Faith },
-            { "endurance", attributes => attributes.Endurance },
-            { "arcane", attributes => attributes.Arcane }
+            { CharacterAttribute.Vitality, attributes => attributes.Vitality },
+            { CharacterAttribute.Vigor, attributes => attributes.Vigor },
+            { CharacterAttribute.Strength, attributes => attributes.Strength },
+            { CharacterAttribute.Dexterity, attributes => attributes.Dexterity },
+            { CharacterAttribute.Intelligence, attributes => attributes.Intelligence },
+            { CharacterAttribute.Faith, attributes => attributes.Faith },
+            { CharacterAttribute.Endurance, attributes => attributes.Endurance },
+            { CharacterAttribute.Arcane, attributes => attributes.Arcane }
         };
     }
 
@@ -26,7 +27,7 @@ public class ScalingCalculator
         float modifiedValue = 0;
 
         foreach (var scalingAttribute in scaling)
-            if (attributeCalculators.TryGetValue(scalingAttribute.Attribute, out var attributeCalculator))
+            if (_attributeCalculators.TryGetValue(scalingAttribute.Attribute, out var attributeCalculator))
             {
                 var attributeValue = attributeCalculator(attributes);
                 modifiedValue += attributeValue * scalingAttribute.Value;

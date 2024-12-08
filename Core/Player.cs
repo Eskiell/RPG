@@ -17,7 +17,6 @@ public class Player : Character
     {
         Level = level;
         Experience = experience;
-        EquippedWeapon = null;
     }
 
     public int Level { get; private set; }
@@ -25,9 +24,9 @@ public class Player : Character
 
     public override void Attack(Character enemy)
     {
-        if (EquippedWeapon != null)
+        if (Equipment.EquippedWeapon != null)
         {
-            EquippedWeapon.Attack(this, enemy);
+            Equipment.EquippedWeapon.Attack(this, enemy);
             return;
         }
 
@@ -36,6 +35,7 @@ public class Player : Character
         enemy.TakeDamage(power);
         Console.WriteLine($"{Name} attacked {enemy.Name} with a punch for {power} damage.");
     }
+
 
     public void GainExperience(double amount)
     {
