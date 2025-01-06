@@ -3,11 +3,17 @@ using RPG.Enums;
 
 namespace RPG.Effects;
 
-public class AttributeBuff(string name, int duration, CharacterAttribute targetAttribute, float bonusValue)
-    : StatusEffect(name, duration, bonusValue)
+public class AttributeBuff : StatusEffect
 {
-    public CharacterAttribute TargetAttribute { get; } = targetAttribute;
-    public float BonusValue { get; } = bonusValue;
+    public CharacterAttribute TargetAttribute { get; }
+    public float BonusValue { get; }
+
+    public AttributeBuff(string name, int duration, CharacterAttribute targetAttribute, float bonusValue)
+        : base(name, duration, bonusValue)
+    {
+        TargetAttribute = targetAttribute;
+        BonusValue = bonusValue;
+    }
 
     public override void ApplyEffect(Character character)
     {

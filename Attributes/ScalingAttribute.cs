@@ -2,8 +2,14 @@
 
 namespace RPG.Attributes;
 
-public class ScalingAttribute(CharacterAttribute attribute, float value)
+public class ScalingAttribute
 {
-    public CharacterAttribute Attribute { get; private set; } = attribute;
-    public float Value { get; private set; } = value;
+    public CharacterAttribute Attribute { get; private set; }
+    public float Value { get; private set; }
+
+    public ScalingAttribute(CharacterAttribute attribute, float value)
+    {
+        Attribute = attribute;
+        Value = value;
+    }
 }
