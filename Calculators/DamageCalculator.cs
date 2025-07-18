@@ -1,7 +1,4 @@
-﻿using System.Text;
-using NCalc;
-
-namespace RPG.Calculators;
+﻿namespace RPG.Calculators;
 
 public class DamageCalculator
 {
@@ -32,27 +29,16 @@ public class DamageCalculator
 
     public string Formula()
     {
-        var formulaBuilder = new StringBuilder();
-        formulaBuilder.Append($"{_baseDamage} * (1 + {_damageModifier}) * (1 + {_targetModifier}) - {_targetDefense}");
-        return formulaBuilder.ToString();
+        // Use parameter placeholders for NCalc
+        return "baseDamage * (1 + damageModifier) * (1 + targetModifier) - targetDefense";
     }
 
     public float CalculateTotalDamage()
     {
-        var formula = Formula();
-        var expression = new Expression(formula)
-        {
-            Parameters =
-            {
-                ["baseDamage"] = _baseDamage,
-                ["damageModifier"] = _damageModifier,
-                ["targetModifier"] = _targetModifier,
-                ["targetDefense"] = _targetDefense
-            }
-        };
+        // Directly calculate damage to avoid NCalc parsing issues
+        var damage = _baseDamage * (1 + _damageModifier) * (1 + _targetModifier) - _targetDefense;
+        Console.WriteLine($"Formula: {_baseDamage} * (1 + {_damageModifier}) * (1 + {_targetModifier}) - {_targetDefense} = {damage}");
 
-        var damage = Convert.ToSingle(expression.Evaluate());
-        Console.WriteLine("Fórmula: " + formula + " = " + damage);
         return (float)Math.Round(Math.Max(Variance(damage), Variance(10)));
     }
 }
