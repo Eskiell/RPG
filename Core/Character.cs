@@ -1,17 +1,19 @@
 ﻿using RPG.Attributes;
 using RPG.Calculators;
 using RPG.Effects;
+using RPG.Enums;
 
 namespace RPG.Core;
 
 public abstract class Character
 {
-    public Character(string name, float health, PointsAttributes pointsAttributes)
+    public Character(string name, float baseHealth, PointsAttributes pointsAttributes)
     {
         Name = name;
-        Health = health;
+        BaseHealth = baseHealth;
         CharacterPointsAttributes = pointsAttributes;
         Equipment = new EquipmentManager(this);
+        Health = GetMaxHealth();
     }
 
     public List<StatusEffect> ActiveEffects { get; set; } = new();
@@ -19,12 +21,19 @@ public abstract class Character
     // Atributos gerais
     public string Name { get; set; }
     public float Health { get; set; }
+    public float BaseHealth { get; protected set; }
     public float BaseAttack { get; set; } = 10;
     public float BaseDefense { get; set; } = 10;
     public int Level { get; set; } = 1;
 
     public EquipmentManager Equipment { get; }
     public PointsAttributes CharacterPointsAttributes { get; protected set; }
+
+    public float GetMaxHealth()
+    {
+        return StatCalculator.ComputeBonus(CharacterAttribute.Vitality, CharacterPointsAttributes.Vitality) +
+               BaseHealth;
+    }
 
     public void UpdateEffects()
     {
