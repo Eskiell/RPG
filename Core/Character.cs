@@ -28,19 +28,24 @@ public abstract class Character
 
     public EquipmentManager Equipment { get; }
     public PointsAttributes CharacterPointsAttributes { get; protected set; }
-    public float MaxStamina => StatCalculator.ComputeBonus(CharacterAttribute.Endurance, CharacterPointsAttributes.Endurance) + 100f;
-    public float MaxMana => StatCalculator.ComputeBonus(CharacterAttribute.Intelligence, CharacterPointsAttributes.Intelligence)
-                            + StatCalculator.ComputeBonus(CharacterAttribute.Faith, CharacterPointsAttributes.Faith)
-                            + 50f;
+
+    public float MaxStamina =>
+        StatCalculator.ComputeBonus(CharacterAttribute.Endurance, CharacterPointsAttributes.Endurance) + 100f;
+
+    public float MaxMana =>
+        StatCalculator.ComputeBonus(CharacterAttribute.Intelligence, CharacterPointsAttributes.Intelligence)
+        + StatCalculator.ComputeBonus(CharacterAttribute.Faith, CharacterPointsAttributes.Faith)
+        + 50f;
 
     public float GetMaxHealth()
     {
         return StatCalculator.ComputeBonus(CharacterAttribute.Vitality, CharacterPointsAttributes.Vitality) +
                BaseHealth;
     }
+
     public float GetAttributeBonus(CharacterAttribute attribute)
     {
-        int value = attribute switch
+        var value = attribute switch
         {
             CharacterAttribute.Vitality => CharacterPointsAttributes.Vitality,
             CharacterAttribute.Vigor => CharacterPointsAttributes.Vigor,
@@ -103,14 +108,20 @@ public abstract class Character
 
     public virtual float GetModifiedPDefense()
     {
-        var vitality = CharacterPointsAttributes.Vitality;
-        var endurance = CharacterPointsAttributes.Endurance;
-        var strength = CharacterPointsAttributes.Strength;
-        const float vitalityBonus = AttributeBonus.Vitality;
-        const float enduranceBonus = AttributeBonus.Endurance;
-        const float strengthBonus = AttributeBonus.Strength;
-        return GetModifiedBaseDefense() * vitality * endurance * strength * vitalityBonus * enduranceBonus *
-               strengthBonus;
+        var vitalityBonus = GetAttributeBonus(CharacterAttribute.Vitality);
+        var enduranceBonus = GetAttributeBonus(CharacterAttribute.Endurance);
+        var strengthBonus = GetAttributeBonus(CharacterAttribute.Strength);
+
+        return BaseDefense + vitalityBonus * enduranceBonus * strengthBonus;
+    }
+
+    public virtual float GetModifiedMDefense()
+    {
+        var intelligenceBonus = GetAttributeBonus(CharacterAttribute.Intelligence);
+        var faithBonus = GetAttributeBonus(CharacterAttribute.Faith);
+        var arcaneBonus = GetAttributeBonus(CharacterAttribute.Arcane);
+
+        return BaseDefense + intelligenceBonus * faithBonus * arcaneBonus;
     }
 
     public virtual float GetModifiedPAttack()
