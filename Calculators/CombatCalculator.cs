@@ -20,7 +20,8 @@ public static class CombatCalculator
                 modifiedAttack += character.CharacterPointsAttributes.Dexterity * scaling.Value;
 
         // Bônus de atributos principais
-        modifiedAttack *= character.CharacterPointsAttributes.Strength * AttributeBonus.Strength;
+        var bonus = StatCalculator.ComputeBonus(CharacterAttribute.Strength, character.CharacterPointsAttributes.Strength);
+        modifiedAttack += bonus;
 
         return modifiedAttack;
     }
@@ -30,18 +31,21 @@ public static class CombatCalculator
         var vitality = character.CharacterPointsAttributes.Vitality;
         var endurance = character.CharacterPointsAttributes.Endurance;
         var strength = character.CharacterPointsAttributes.Strength;
+        var vitalityBonus = StatCalculator.ComputeBonus(CharacterAttribute.Vitality, vitality);
+        var enduranceBonus = StatCalculator.ComputeBonus(CharacterAttribute.Endurance, endurance);
+        var strengthBonus = StatCalculator.ComputeBonus(CharacterAttribute.Strength, strength);
+        return character.BaseDefense + (vitalityBonus * enduranceBonus * strengthBonus);
 
-        return character.BaseDefense * vitality * endurance * strength *
-               AttributeBonus.Vitality * AttributeBonus.Endurance * AttributeBonus.Strength;
     }
 
     public static float CalculatePhysicalAttack(Character character)
     {
         var strength = character.CharacterPointsAttributes.Strength;
         var dexterity = character.CharacterPointsAttributes.Dexterity;
+        var strengthBonus = StatCalculator.ComputeBonus(CharacterAttribute.Strength, strength);
+        var dexterityBonus = StatCalculator.ComputeBonus(CharacterAttribute.Dexterity, dexterity);
+        return CalculateModifiedAttack(character) + (strengthBonus * dexterityBonus);
 
-        return CalculateModifiedAttack(character) * strength * dexterity *
-               AttributeBonus.Strength * AttributeBonus.Dexterity;
     }
 
     public static float ApplyEffects(Character character, float baseValue, CharacterAttribute attribute)

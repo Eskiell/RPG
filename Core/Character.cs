@@ -28,11 +28,31 @@ public abstract class Character
 
     public EquipmentManager Equipment { get; }
     public PointsAttributes CharacterPointsAttributes { get; protected set; }
+    public float MaxStamina => StatCalculator.ComputeBonus(CharacterAttribute.Endurance, CharacterPointsAttributes.Endurance) + 100f;
+    public float MaxMana => StatCalculator.ComputeBonus(CharacterAttribute.Intelligence, CharacterPointsAttributes.Intelligence)
+                            + StatCalculator.ComputeBonus(CharacterAttribute.Faith, CharacterPointsAttributes.Faith)
+                            + 50f;
 
     public float GetMaxHealth()
     {
         return StatCalculator.ComputeBonus(CharacterAttribute.Vitality, CharacterPointsAttributes.Vitality) +
                BaseHealth;
+    }
+    public float GetAttributeBonus(CharacterAttribute attribute)
+    {
+        int value = attribute switch
+        {
+            CharacterAttribute.Vitality => CharacterPointsAttributes.Vitality,
+            CharacterAttribute.Vigor => CharacterPointsAttributes.Vigor,
+            CharacterAttribute.Strength => CharacterPointsAttributes.Strength,
+            CharacterAttribute.Dexterity => CharacterPointsAttributes.Dexterity,
+            CharacterAttribute.Intelligence => CharacterPointsAttributes.Intelligence,
+            CharacterAttribute.Faith => CharacterPointsAttributes.Faith,
+            CharacterAttribute.Endurance => CharacterPointsAttributes.Endurance,
+            CharacterAttribute.Arcane => CharacterPointsAttributes.Arcane,
+            _ => 0
+        };
+        return StatCalculator.ComputeBonus(attribute, value);
     }
 
     public void UpdateEffects()
