@@ -1,9 +1,9 @@
-﻿using RPG.Attributes;
+﻿using RPG.Systems.Attributes;
 using RPG.Core;
 using RPG.Effects;
 using RPG.Enums;
-using RPG.Items;
-using RPG.Npcs;
+using RPG.Entities.Items;
+using RPG.NPCs;
 using RPG.Utils;
 
 namespace RPG;
