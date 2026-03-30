@@ -1,5 +1,8 @@
-﻿namespace RPG.Combat;
+namespace RPG.Combat;
 
+/// <summary>
+/// Calcula o dano final de um ataque aplicando modificadores de ataque, defesa e variância aleatória.
+/// </summary>
 public class DamageCalculator
 {
     private const int DamageVariance = 10;
@@ -9,6 +12,13 @@ public class DamageCalculator
     private readonly float _targetDefense;
     private readonly float _targetModifier;
 
+    /// <summary>
+    /// Inicializa a calculadora de dano.
+    /// </summary>
+    /// <param name="baseDamage">Dano base do atacante.</param>
+    /// <param name="damageModifier">Modificador de dano do atacante (ex.: bônus de atributo).</param>
+    /// <param name="targetDefense">Defesa do alvo.</param>
+    /// <param name="targetModifier">Modificador de defesa do alvo.</param>
     public DamageCalculator(float baseDamage, float damageModifier, float? targetDefense = 0,
         float? targetModifier = 0)
     {
@@ -27,18 +37,23 @@ public class DamageCalculator
         return _random.NextDouble() * (maxDamage - minDamage) + minDamage;
     }
 
+    /// <summary>
+    /// Retorna a fórmula de dano utilizada no cálculo.
+    /// </summary>
+    /// <returns>String com a expressão da fórmula.</returns>
     public string Formula()
     {
-        // Use parameter placeholders for NCalc
         return "baseDamage * (1 + damageModifier) * (1 + targetModifier) - targetDefense";
     }
 
+    /// <summary>
+    /// Calcula o dano total do ataque com variância aleatória de ±10%.
+    /// </summary>
+    /// <returns>Dano final arredondado.</returns>
     public float CalculateTotalDamage()
     {
-        // Directly calculate damage to avoid NCalc parsing issues
         var damage = _baseDamage * (1 + _damageModifier) * (1 + _targetModifier) - _targetDefense;
         Console.WriteLine($"Formula: {_baseDamage} * (1 + {_damageModifier}) * (1 + {_targetModifier}) - {_targetDefense} = {damage}");
-
         return (float)Math.Round(Math.Max(Variance(damage), Variance(10)));
     }
 }

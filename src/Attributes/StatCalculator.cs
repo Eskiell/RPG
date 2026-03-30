@@ -1,10 +1,19 @@
-﻿using RPG.Attributes;
+using RPG.Attributes;
 using RPG.Enums;
 
 namespace RPG.Attributes;
 
+/// <summary>
+/// Calcula os bônus finais de atributos aplicando as curvas de crescimento corretas para cada stat.
+/// </summary>
 public class StatCalculator
 {
+    /// <summary>
+    /// Calcula o bônus total de um atributo dado o número de pontos alocados.
+    /// </summary>
+    /// <param name="attr">Atributo a ser calculado.</param>
+    /// <param name="points">Pontos alocados no atributo.</param>
+    /// <returns>Bônus numérico resultante.</returns>
     public static float ComputeBonus(CharacterAttribute attr, int points)
     {
         var scaler = GetScalerFor(attr);

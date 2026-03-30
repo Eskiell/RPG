@@ -2,20 +2,31 @@ using RPG.Items;
 
 namespace RPG.Characters;
 
+/// <summary>
+/// Gerencia o equipamento de um personagem: arma, armadura e anéis.
+/// </summary>
 public class EquipmentManager
 {
     private const int MaxRings = 4;
     private readonly List<Ring> _equippedRings = new();
-
     private readonly Character _owner;
 
+    /// <summary>
+    /// Inicializa o gerenciador de equipamentos para o personagem informado.
+    /// </summary>
+    /// <param name="owner">Personagem dono dos equipamentos.</param>
     public EquipmentManager(Character owner)
     {
         _owner = owner;
     }
 
+    /// <summary>Arma atualmente equipada, ou <c>null</c> se nenhuma.</summary>
     public Weapon? EquippedWeapon { get; private set; }
+
+    /// <summary>Armadura atualmente equipada, ou <c>null</c> se nenhuma.</summary>
     public Armor? EquippedArmor { get; private set; }
+
+    /// <summary>Lista somente leitura dos anéis equipados (máximo de 4).</summary>
     public IReadOnlyList<Ring> EquippedRings => _equippedRings;
 
     /// <summary>
@@ -35,6 +46,7 @@ public class EquipmentManager
         Console.WriteLine($"{_owner.Name} equipped the weapon: {weapon.Name}.");
     }
 
+    /// <summary>Remove a arma equipada do personagem.</summary>
     public void UnequipWeapon()
     {
         if (EquippedWeapon == null)
@@ -64,6 +76,7 @@ public class EquipmentManager
         Console.WriteLine($"{_owner.Name} equipped the armor: {armor.Name}.");
     }
 
+    /// <summary>Remove a armadura equipada do personagem.</summary>
     public void UnequipArmor()
     {
         if (EquippedArmor == null)
@@ -93,6 +106,10 @@ public class EquipmentManager
         Console.WriteLine($"{_owner.Name} equipped the ring: {ring.Name}.");
     }
 
+    /// <summary>
+    /// Remove um anel equipado do personagem.
+    /// </summary>
+    /// <param name="ring">Anel a ser removido.</param>
     public void UnequipRing(Ring ring)
     {
         if (_equippedRings.Remove(ring))

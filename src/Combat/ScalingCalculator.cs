@@ -1,12 +1,18 @@
-﻿using RPG.Attributes;
+using RPG.Attributes;
 using RPG.Enums;
 
 namespace RPG.Combat;
 
+/// <summary>
+/// Calcula o bônus de dano de uma arma com base nos atributos de escalonamento e nos pontos do personagem.
+/// </summary>
 public class ScalingCalculator
 {
     private readonly Dictionary<CharacterAttribute, Func<PointsAttributes, float>> _attributeCalculators;
 
+    /// <summary>
+    /// Inicializa o calculador e mapeia cada atributo ao seu getter correspondente.
+    /// </summary>
     public ScalingCalculator()
     {
         _attributeCalculators = new Dictionary<CharacterAttribute, Func<PointsAttributes, float>>
@@ -22,6 +28,12 @@ public class ScalingCalculator
         };
     }
 
+    /// <summary>
+    /// Calcula o bônus total de escalonamento de uma arma para os atributos do personagem.
+    /// </summary>
+    /// <param name="scaling">Array de escalonamentos da arma.</param>
+    /// <param name="attributes">Atributos do personagem portador.</param>
+    /// <returns>Bônus total de dano escalonado.</returns>
     public float CalculateScaling(ScalingAttribute[] scaling, PointsAttributes attributes)
     {
         float modifiedValue = 0;
