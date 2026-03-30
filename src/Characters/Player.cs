@@ -6,8 +6,19 @@ using RPG.Items;
 
 namespace RPG.Characters;
 
+/// <summary>
+/// Representa o personagem controlado pelo jogador, com sistema de experiência, nivelamento e drops.
+/// </summary>
 public class Player : Character
 {
+    /// <summary>
+    /// Inicializa um novo jogador.
+    /// </summary>
+    /// <param name="name">Nome do jogador.</param>
+    /// <param name="health">Vida base.</param>
+    /// <param name="pointsAttributes">Atributos primários.</param>
+    /// <param name="level">Nível inicial (padrão: 1).</param>
+    /// <param name="experience">Experiência inicial (padrão: 0).</param>
     public Player(
         string name,
         float health,
@@ -20,9 +31,16 @@ public class Player : Character
         Experience = experience;
     }
 
+    /// <summary>Nível atual do jogador (sobrescreve o nível base de Character).</summary>
     public new int Level { get; private set; }
+
+    /// <summary>Experiência acumulada pelo jogador.</summary>
     public double Experience { get; private set; }
 
+    /// <summary>
+    /// Ataca um inimigo usando a arma equipada ou um soco caso não haja arma.
+    /// </summary>
+    /// <param name="enemy">Personagem alvo.</param>
     public override void Attack(Character enemy)
     {
         if (Equipment.EquippedWeapon != null)
@@ -58,6 +76,10 @@ public class Player : Character
         Console.WriteLine($" {Name} Leveled up! New level is {Level}.");
     }
 
+    /// <summary>
+    /// Simula os drops do personagem ao ser derrotado, usando o sistema de tabela de drops.
+    /// </summary>
+    /// <returns>Lista de itens dropados.</returns>
     public List<Item> Drops()
     {
         // Criando os itens
