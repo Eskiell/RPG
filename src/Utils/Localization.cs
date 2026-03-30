@@ -43,7 +43,7 @@ public static class Localization
             languageMessages.TryGetValue(key, out var template))
         {
             foreach (var (placeholder, value) in placeholders)
-                template = Regex.Replace(template, $"\{{{placeholder}\}}", value);
+                template = Regex.Replace(template, $"{{{{{placeholder}}}}}", value);
             return template;
         }
 

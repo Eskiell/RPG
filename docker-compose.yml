@@ -1,0 +1,7 @@
+services:
+  rpg:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /src
+    command: ["dotnet", "run", "--project", "RPG.csproj"]
