@@ -1,4 +1,4 @@
-﻿namespace RPG.Systems.Attributes;
+﻿namespace RPG.Attributes;
 
 /// <summary>
 ///     Classe que define os bônus de atributos para cálculos de jogo.

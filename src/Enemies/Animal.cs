@@ -1,6 +1,6 @@
-﻿using RPG.Core;
+﻿using RPG.Characters;
 
-namespace RPG.Entities.Animals;
+namespace RPG.Enemies;
 
 public abstract class Animal
 {

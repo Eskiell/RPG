@@ -1,9 +1,9 @@
-﻿using RPG.Systems.Attributes;
-using RPG.Calculators;
+﻿using RPG.Attributes;
+using RPG.Combat;
 using RPG.Effects;
 using RPG.Enums;
 
-namespace RPG.Core;
+namespace RPG.Characters;
 
 public abstract class Character
 {

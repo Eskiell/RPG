@@ -1,8 +1,8 @@
-﻿using RPG.Systems.Attributes;
+﻿using RPG.Attributes;
 using RPG.Enums;
-using RPG.Interfaces;
+using RPG.Characters.NPCs.Behaviors;
 
-namespace RPG.Core;
+namespace RPG.Characters;
 
 public class Npc : Character
 {

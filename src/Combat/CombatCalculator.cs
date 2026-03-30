@@ -1,9 +1,9 @@
-using RPG.Systems.Attributes;
-using RPG.Core;
+using RPG.Attributes;
+using RPG.Characters;
 using RPG.Effects;
 using RPG.Enums;
 
-namespace RPG.Calculators;
+namespace RPG.Combat;
 
 public static class CombatCalculator
 {

@@ -1,6 +1,6 @@
-﻿using RPG.Entities.Items;
+﻿using RPG.Items;
 
-namespace RPG.Systems.Drops;
+namespace RPG.Progression;
 
 public class ItemDrop
 {

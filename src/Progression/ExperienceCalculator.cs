@@ -1,4 +1,4 @@
-﻿namespace RPG.Calculators;
+﻿namespace RPG.Progression;
 
 public static class ExperienceCalculator
 {

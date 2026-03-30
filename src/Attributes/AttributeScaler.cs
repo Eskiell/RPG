@@ -1,4 +1,4 @@
-﻿namespace RPG.Systems.Attributes;
+﻿namespace RPG.Attributes;
 
 public class AttributeScaler
 {

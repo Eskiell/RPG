@@ -1,9 +1,9 @@
-﻿using RPG.Systems.Attributes;
-using RPG.Core;
-using RPG.Entities.Items;
-using RPG.Behaviors;
+﻿using RPG.Attributes;
+using RPG.Characters;
+using RPG.Items;
+using RPG.Characters.NPCs.Behaviors;
 
-namespace RPG.NPCs;
+namespace RPG.Characters.NPCs;
 
 public class Merchant : Npc
 {

@@ -1,4 +1,4 @@
-﻿namespace RPG.Systems.Combat;
+﻿namespace RPG.Combat;
 
 public class Combo
 {

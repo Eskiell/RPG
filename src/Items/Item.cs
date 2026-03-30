@@ -1,6 +1,6 @@
 ﻿using RPG.Enums;
 
-namespace RPG.Entities.Items;
+namespace RPG.Items;
 
 public class Item
 {

@@ -1,4 +1,4 @@
-﻿namespace RPG.Entities.Items;
+﻿namespace RPG.Items;
 
 public abstract class Equipment
 {

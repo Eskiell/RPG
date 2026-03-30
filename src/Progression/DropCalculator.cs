@@ -1,7 +1,7 @@
-﻿using RPG.Systems.Drops;
-using RPG.Entities.Items;
+﻿using RPG.Progression;
+using RPG.Items;
 
-namespace RPG.Calculators;
+namespace RPG.Progression;
 
 public class DropCalculator
 {

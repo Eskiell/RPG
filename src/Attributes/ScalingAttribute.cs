@@ -1,6 +1,6 @@
 ﻿using RPG.Enums;
 
-namespace RPG.Systems.Attributes;
+namespace RPG.Attributes;
 
 public class ScalingAttribute
 {

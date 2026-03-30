@@ -1,8 +1,8 @@
-﻿using RPG.Systems.Attributes;
-using RPG.Calculators;
-using RPG.Core;
+﻿using RPG.Attributes;
+using RPG.Combat;
+using RPG.Characters;
 
-namespace RPG.Entities.Items;
+namespace RPG.Items;
 
 public class Sword : Weapon
 {

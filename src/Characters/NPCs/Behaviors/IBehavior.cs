@@ -1,6 +1,6 @@
-﻿using RPG.Core;
+﻿using RPG.Characters;
 
-namespace RPG.Interfaces;
+namespace RPG.Characters.NPCs.Behaviors;
 
 public interface IBehavior
 {

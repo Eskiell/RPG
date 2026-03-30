@@ -1,7 +1,7 @@
-﻿using RPG.Systems.Attributes;
+﻿using RPG.Attributes;
 using RPG.Enums;
 
-namespace RPG.Systems.Combat;
+namespace RPG.Combat;
 
 public class Damage
 {

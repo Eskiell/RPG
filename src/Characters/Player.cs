@@ -1,9 +1,10 @@
-﻿using RPG.Systems.Attributes;
-using RPG.Calculators;
+﻿using RPG.Attributes;
+using RPG.Combat;
+using RPG.Progression;
 using RPG.Enums;
-using RPG.Entities.Items;
+using RPG.Items;
 
-namespace RPG.Core;
+namespace RPG.Characters;
 
 public class Player : Character
 {

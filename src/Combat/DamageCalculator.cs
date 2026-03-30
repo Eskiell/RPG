@@ -1,4 +1,4 @@
-﻿namespace RPG.Calculators;
+﻿namespace RPG.Combat;
 
 public class DamageCalculator
 {

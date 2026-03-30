@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using RPG.Entities.Items;
+using RPG.Items;
 
 namespace RPG.Utils;
 

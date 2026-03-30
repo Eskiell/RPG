@@ -1,6 +1,6 @@
-using RPG.Systems.Attributes;
+using RPG.Attributes;
 
-namespace RPG.Entities.Items;
+namespace RPG.Items;
 
 public class Ring
 {

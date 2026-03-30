@@ -1,4 +1,4 @@
-using RPG.Core;
+using RPG.Characters;
 using RPG.Enums;
 
 namespace RPG.Effects;

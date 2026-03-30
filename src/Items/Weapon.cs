@@ -1,7 +1,7 @@
-﻿using RPG.Core;
+﻿using RPG.Characters;
 using RPG.Effects;
 
-namespace RPG.Entities.Items;
+namespace RPG.Items;
 
 public abstract class Weapon : Equipment
 {

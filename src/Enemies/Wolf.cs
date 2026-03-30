@@ -1,4 +1,4 @@
-﻿namespace RPG.Entities.Animals;
+﻿namespace RPG.Enemies;
 
 public class Wolf : Animal
 {

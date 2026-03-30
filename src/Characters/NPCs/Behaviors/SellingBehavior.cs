@@ -1,8 +1,8 @@
-﻿using RPG.Core;
-using RPG.Interfaces;
-using RPG.Entities.Items;
+﻿using RPG.Characters;
+using RPG.Characters.NPCs.Behaviors;
+using RPG.Items;
 
-namespace RPG.Behaviors;
+namespace RPG.Characters.NPCs.Behaviors;
 
 public class SellingBehavior : IBehavior
 {

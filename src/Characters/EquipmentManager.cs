@@ -1,6 +1,6 @@
-using RPG.Entities.Items;
+using RPG.Items;
 
-namespace RPG.Core;
+namespace RPG.Characters;
 
 public class EquipmentManager
 {
